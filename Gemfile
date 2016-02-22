@@ -9,6 +9,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
 gem 'pg'
+gem 'responders'
+gem 'active_model_serializers'
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
@@ -27,4 +30,5 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'quiet_assets'
+  gem 'bullet'
 end
