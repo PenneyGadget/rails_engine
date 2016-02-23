@@ -10,7 +10,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
 gem 'pg'
 gem 'responders'
-gem 'active_model_serializers'
+gem "active_model_serializers", github: "rails-api/active_model_serializers"
 
 group :development, :test do
   gem 'byebug'
@@ -25,10 +25,11 @@ group :development, :test do
   gem 'pry'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'simplecov', :require => false, :group => :test
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'quiet_assets'
-  # gem 'bullet'
+  gem 'bullet'
 end

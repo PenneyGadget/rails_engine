@@ -1,6 +1,6 @@
 require 'csv'
 
-task :import => :environment do
+task :import => [:environment, "db:drop", "db:create", "db:migrate"] do
   CSV.foreach("lib/assets/customers.csv", headers: true) do |row|
     Customer.create!(row.to_h)
   end
@@ -24,9 +24,9 @@ task :import => :environment do
   CSV.foreach("lib/assets/invoice_items.csv", headers: true) do |row|
     InvoiceItem.create!(row.to_h)
   end
-  puts "Invoices items created!"
+  puts "Invoice items created!"
 
-  CSV.foreach("lib/assets/transactions.csv", headers: true) do |row|
+  CSV.foreach("lib/assets/transactions.csv", headers: true, header_converters: :symbol) do |row|
     Transaction.create!({id:                 row[:id],
                          invoice_id:         row[:invoice_id],
                          credit_card_number: row[:credit_card_number],
