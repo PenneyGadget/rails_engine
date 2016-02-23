@@ -8,4 +8,15 @@ class Api::V1::InvoicesController < ApplicationController
   def show
     respond_with Invoice.find(params[:id])
   end
+
+  private
+
+  def invoice_params
+    params.require(:invoice).permit(:id,
+                                    :status,
+                                    :customer_id,
+                                    :merhchange_id,
+                                    :created_at,
+                                    :updated_at)
+  end
 end

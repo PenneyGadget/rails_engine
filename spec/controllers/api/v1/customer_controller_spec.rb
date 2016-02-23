@@ -30,9 +30,12 @@ RSpec.describe Api::V1::CustomersController, type: :controller do
 
       expect(json_response["id"]).to eq(customer.id)
       expect(json_response["first_name"]).to eq(customer.first_name)
+      expect(json_response["last_name"]).to eq(customer.last_name)
+      # expect(json_response["created_at"]).to eq(customer.created_at)
+      # expect(json_response["updated_at"]).to eq(customer.updated_at)
       expect(response).to be_success
       expect(response.status).to eq(200)
     end
   end
-  
+
 end

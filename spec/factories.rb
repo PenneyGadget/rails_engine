@@ -9,4 +9,48 @@ FactoryGirl.define do
     updated_at Date.today
   end
 
+  factory :item do
+    name Faker::Commerce.product_name
+    description Faker::Lorem.sentence(8)
+    unit_price "37462"
+    merchant
+    created_at Date.today
+    updated_at Date.today
+  end
+
+  factory :invoice do
+    customer
+    merchant
+    status "shipped"
+    created_at Date.today
+    updated_at Date.today
+  end
+
+  factory :invoice_item do
+    item
+    invoice
+    quantity Faker::Number.digit
+    unit_price "62809"
+    created_at Date.today
+    updated_at Date.today
+  end
+
+  factory :merchant do
+    name Faker::Company.name
+    created_at Date.today
+    updated_at Date.today
+  end
+
+  factory :transaction do
+    invoice
+    credit_card_number Faker::Business.credit_card_number.gsub!("-", "")
+    result
+    created_at Date.today
+    updated_at Date.today
+  end
+
+  sequence :result, ["success", "failed"].cycle do |result|
+    result
+  end
+
 end

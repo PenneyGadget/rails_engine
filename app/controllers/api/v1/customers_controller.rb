@@ -6,12 +6,16 @@ class Api::V1::CustomersController < ApplicationController
   end
 
   def show
-    respond_with Customer.find(params[:id]) if params[:id]
+    respond_with Customer.find(params[:id])
   end
 
   private
 
   def customer_params
-    params.permit(:id, :first_name, :last_name, :created_at, :updated_at)
+    params.require(:customer).permit(:id,
+                                     :first_name,
+                                     :last_name,
+                                     :created_at,
+                                     :updated_at)
   end
 end
