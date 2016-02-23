@@ -6,12 +6,10 @@ class Api::V1::CustomersController < ApplicationController
   end
 
   def show
-    respond_with Customer.find(params[:id])
-  end
-
-  def find
-    respond_with Customer.find_by(customer_params)
-    # Customer.where("NAME ilike ?", params[:name]).first)
+    #if statement to determine what param was passed in and find based on that
+    respond_with Customer.find(params[:id]) if params[:id]
+    respond_with Customer.where("customers.first_name ilike ?", params[:name].first)
+    # respond_with Customer.where("NAME ilike ?", params[:name]).first)
   end
 
   private
