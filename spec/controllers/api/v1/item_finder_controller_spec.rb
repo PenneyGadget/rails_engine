@@ -37,7 +37,7 @@ RSpec.describe Api::V1::ItemFinderController, type: :controller do
       items = create_list(:item, 3)
 
       get :show, unit_price: items.last.unit_price, format: :json
-      expect(json_response["unit_price"]).to eq(items.last.unit_price)
+      expect(json_response["unit_price"]).to eq(items.last.unit_price.to_s)
       expect(response).to be_success
       expect(response.status).to eq(200)
     end

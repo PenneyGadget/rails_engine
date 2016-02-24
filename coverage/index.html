@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-02-24T09:08:47-07:00">2016-02-24T09:08:47-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-02-24T12:10:09-07:00">2016-02-24T12:10:09-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>81</b> files in total.
-    <b>1150</b> relevant lines. 
-    <span class="green"><b>1142</b> lines covered</span> and
+    <b>1151</b> relevant lines. 
+    <span class="green"><b>1143</b> lines covered</span> and
     <span class="red"><b>8</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -513,9 +513,9 @@
       <tr>
         <td class="strong"><a href="#73119f6ab46ab183277e2e098235a251b3cc69fc" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>61</td>
-        <td>41</td>
-        <td>41</td>
+        <td>66</td>
+        <td>42</td>
+        <td>42</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -3839,7 +3839,7 @@
         <li class="covered" data-hits="41" data-linenumber="8">
           <span class="hits">41</span>
           
-          <code class="ruby">    self.unit_price = (unit_price.to_i / 100.00).to_s</code>
+          <code class="ruby">    self.unit_price = (unit_price.to_i / 100.00)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -3935,7 +3935,7 @@
         <li class="covered" data-hits="68" data-linenumber="11">
           <span class="hits">68</span>
           
-          <code class="ruby">    self.unit_price = (unit_price.to_i / 100.0).to_s</code>
+          <code class="ruby">    self.unit_price = (unit_price.to_i / 100.0)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -5081,8 +5081,8 @@
     <h3>config/routes.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>41</b> relevant lines. 
-      <span class="green"><b>41</b> lines covered</span> and
+      <b>42</b> relevant lines. 
+      <span class="green"><b>42</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5150,10 +5150,10 @@
           <code class="ruby">        get &#39;/invoices&#39;, to: &#39;merchants/invoices#index&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">        get &#39;/revenue&#39;, to: &#39;merchants/revenues#show&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -5162,52 +5162,52 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="13">
           
-          <code class="ruby">      get &#39;/customers/find&#39;, to: &#39;customer_finder#show&#39;</code>
+          
+          <code class="ruby">        # get &#39;most_revenue&#39;, to: &#39;merchants/most_revenue#index&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="14">
           
-          <code class="ruby">      get &#39;/customers/find_all&#39;, to: &#39;customer_finder#index&#39;</code>
+          
+          <code class="ruby">        # get &#39;most_items&#39;, to: &#39;merchants/most_items#index&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="15">
           
-          <code class="ruby">      get &#39;/customers/random&#39;, to: &#39;random_customer#show&#39;</code>
+          
+          <code class="ruby">        # get &#39;revenue&#39;, to: &#39;merchants/revenue#show&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="17">
           
-          <code class="ruby">      resources :customers, only: [:index, :show] do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">        get &#39;/invoices&#39;, to: &#39;customers/invoices#index&#39;</code>
+          <code class="ruby">      get &#39;/customers/find&#39;, to: &#39;customer_finder#show&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">        get &#39;/transactions&#39;, to: &#39;customers/transactions#index&#39;</code>
+          <code class="ruby">      get &#39;/customers/find_all&#39;, to: &#39;customer_finder#index&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">      get &#39;/customers/random&#39;, to: &#39;random_customer#show&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
@@ -5219,49 +5219,49 @@
         <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">      get &#39;/items/find&#39;, to: &#39;item_finder#show&#39;</code>
+          <code class="ruby">      resources :customers, only: [:index, :show] do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">      get &#39;/items/find_all&#39;, to: &#39;item_finder#index&#39;</code>
+          <code class="ruby">        get &#39;/invoices&#39;, to: &#39;customers/invoices#index&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
-          <code class="ruby">      get &#39;/items/random&#39;, to: &#39;random_item#show&#39;</code>
+          <code class="ruby">        get &#39;/transactions&#39;, to: &#39;customers/transactions#index&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="26">
           
-          <code class="ruby">      resources :items, only: [:index, :show] do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
-          <code class="ruby">        get &#39;/invoice_items&#39;, to: &#39;items/invoice_items#index&#39;</code>
+          <code class="ruby">      get &#39;/items/find&#39;, to: &#39;item_finder#show&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
-          <code class="ruby">        get &#39;/merchant&#39;, to: &#39;items/merchants#show&#39;</code>
+          <code class="ruby">      get &#39;/items/find_all&#39;, to: &#39;item_finder#index&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">      get &#39;/items/random&#39;, to: &#39;random_item#show&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
@@ -5273,184 +5273,214 @@
         <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
-          <code class="ruby">      get &#39;/invoices/find&#39;, to: &#39;invoice_finder#show&#39;</code>
+          <code class="ruby">      resources :items, only: [:index, :show] do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
-          <code class="ruby">      get &#39;/invoices/find_all&#39;, to: &#39;invoice_finder#index&#39;</code>
+          <code class="ruby">        get &#39;/invoice_items&#39;, to: &#39;items/invoice_items#index&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
-          <code class="ruby">      get &#39;/invoices/random&#39;, to: &#39;random_invoice#show&#39;</code>
+          <code class="ruby">        get &#39;/merchant&#39;, to: &#39;items/merchants#show&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="35">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="35">
           
-          <code class="ruby">      resources :invoices, only: [:index, :show] do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
-          <code class="ruby">        get &#39;/transactions&#39;, to: &#39;invoices/transactions#index&#39;</code>
+          <code class="ruby">      get &#39;/invoices/find&#39;, to: &#39;invoice_finder#show&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="37">
           <span class="hits">1</span>
           
-          <code class="ruby">        get &#39;/invoice_items&#39;, to: &#39;invoices/invoice_items#index&#39;</code>
+          <code class="ruby">      get &#39;/invoices/find_all&#39;, to: &#39;invoice_finder#index&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="38">
           <span class="hits">1</span>
           
-          <code class="ruby">        get &#39;/items&#39;, to: &#39;invoices/items#index&#39;</code>
+          <code class="ruby">      get &#39;/invoices/random&#39;, to: &#39;random_invoice#show&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="39">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="39">
           
-          <code class="ruby">        get &#39;/customer&#39;, to: &#39;invoices/customers#show&#39;</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
-          <code class="ruby">        get &#39;/merchant&#39;, to: &#39;invoices/merchants#show&#39;</code>
+          <code class="ruby">      resources :invoices, only: [:index, :show] do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="covered" data-hits="1" data-linenumber="41">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">        get &#39;/transactions&#39;, to: &#39;invoices/transactions#index&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="covered" data-hits="1" data-linenumber="42">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">        get &#39;/invoice_items&#39;, to: &#39;invoices/invoice_items#index&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
-          <code class="ruby">      get &#39;/transactions/find&#39;, to: &#39;transaction_finder#show&#39;</code>
+          <code class="ruby">        get &#39;/items&#39;, to: &#39;invoices/items#index&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
-          <code class="ruby">      get &#39;/transactions/find_all&#39;, to: &#39;transaction_finder#index&#39;</code>
+          <code class="ruby">        get &#39;/customer&#39;, to: &#39;invoices/customers#show&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="45">
           <span class="hits">1</span>
           
-          <code class="ruby">      get &#39;/transactions/random&#39;, to: &#39;random_transaction#show&#39;</code>
+          <code class="ruby">        get &#39;/merchant&#39;, to: &#39;invoices/merchants#show&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="46">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="47">
           
-          <code class="ruby">      resources :transactions, only: [:index, :show] do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="48">
           <span class="hits">1</span>
           
-          <code class="ruby">        get &#39;/invoice&#39;, to: &#39;transactions/invoices#show&#39;</code>
+          <code class="ruby">      get &#39;/transactions/find&#39;, to: &#39;transaction_finder#show&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">      get &#39;/transactions/find_all&#39;, to: &#39;transaction_finder#index&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get &#39;/transactions/random&#39;, to: &#39;random_transaction#show&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="51">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      get &#39;/invoice_items/find&#39;, to: &#39;invoice_item_finder#show&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="52">
           <span class="hits">1</span>
           
-          <code class="ruby">      get &#39;/invoice_items/find_all&#39;, to: &#39;invoice_item_finder#index&#39;</code>
+          <code class="ruby">      resources :transactions, only: [:index, :show] do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
-          <code class="ruby">      get &#39;/invoice_items/random&#39;, to: &#39;random_invoice_item#show&#39;</code>
+          <code class="ruby">        get &#39;/invoice&#39;, to: &#39;transactions/invoices#show&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="54">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="55">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="55">
           
-          <code class="ruby">      resources :invoice_items, only: [:index, :show] do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="56">
           <span class="hits">1</span>
           
-          <code class="ruby">        get &#39;/invoice&#39;, to: &#39;invoice_items/invoices#show&#39;</code>
+          <code class="ruby">      get &#39;/invoice_items/find&#39;, to: &#39;invoice_item_finder#show&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="57">
           <span class="hits">1</span>
           
-          <code class="ruby">        get &#39;/item&#39;, to: &#39;invoice_items/items#show&#39;</code>
+          <code class="ruby">      get &#39;/invoice_items/find_all&#39;, to: &#39;invoice_item_finder#index&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="58">
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">      get &#39;/invoice_items/random&#39;, to: &#39;random_invoice_item#show&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="59">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="60">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      resources :invoice_items, only: [:index, :show] do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        get &#39;/invoice&#39;, to: &#39;invoice_items/invoices#show&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        get &#39;/item&#39;, to: &#39;invoice_items/items#show&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="60">
+        <li class="never" data-hits="" data-linenumber="65">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="66">
           
           
           <code class="ruby">end</code>
@@ -7439,7 +7469,7 @@
         <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(json_response[&quot;unit_price&quot;]).to eq(invoice_items.first.unit_price)</code>
+          <code class="ruby">      expect(json_response[&quot;unit_price&quot;]).to eq(invoice_items.first.unit_price.to_s)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="28">
@@ -8285,7 +8315,7 @@
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(json_response[&quot;unit_price&quot;]).to eq(item.unit_price)</code>
+          <code class="ruby">      expect(json_response[&quot;unit_price&quot;]).to eq(item.unit_price.to_s)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
@@ -8405,7 +8435,7 @@
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(json_response.last[&quot;unit_price&quot;]).to eq(invoice_items.last.unit_price)</code>
+          <code class="ruby">      expect(json_response.last[&quot;unit_price&quot;]).to eq(invoice_items.last.unit_price.to_s)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
@@ -8507,7 +8537,7 @@
         <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(json_response[&quot;unit_price&quot;]).to eq(invoice_item.unit_price)</code>
+          <code class="ruby">      expect(json_response[&quot;unit_price&quot;]).to eq(invoice_item.unit_price.to_s)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="32">
@@ -8885,7 +8915,7 @@
         <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(json_response.last[&quot;unit_price&quot;]).to eq(invoice_items.last.unit_price)</code>
+          <code class="ruby">      expect(json_response.last[&quot;unit_price&quot;]).to eq(invoice_items.last.unit_price.to_s)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
@@ -9047,7 +9077,7 @@
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(json_response.last[&quot;unit_price&quot;]).to eq(items.last.unit_price)</code>
+          <code class="ruby">      expect(json_response.last[&quot;unit_price&quot;]).to eq(items.last.unit_price.to_s)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="22">
@@ -9923,7 +9953,7 @@
         <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(json_response[&quot;unit_price&quot;]).to eq(items.last.unit_price)</code>
+          <code class="ruby">      expect(json_response[&quot;unit_price&quot;]).to eq(items.last.unit_price.to_s)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="41">
@@ -10637,7 +10667,7 @@
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(json_response.first[&quot;unit_price&quot;]).to eq(invoice_items.first.unit_price)</code>
+          <code class="ruby">      expect(json_response.first[&quot;unit_price&quot;]).to eq(invoice_items.first.unit_price.to_s)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="22">
@@ -10673,7 +10703,7 @@
         <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(json_response.last[&quot;unit_price&quot;]).to eq(invoice_items.last.unit_price)</code>
+          <code class="ruby">      expect(json_response.last[&quot;unit_price&quot;]).to eq(invoice_items.last.unit_price.to_s)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="28">
@@ -10955,7 +10985,7 @@
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(json_response.last[&quot;unit_price&quot;]).to eq(items.last.unit_price)</code>
+          <code class="ruby">      expect(json_response.last[&quot;unit_price&quot;]).to eq(items.last.unit_price.to_s)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
@@ -11069,7 +11099,7 @@
         <li class="covered" data-hits="1" data-linenumber="35">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(json_response[&quot;unit_price&quot;]).to eq(item.unit_price)</code>
+          <code class="ruby">      expect(json_response[&quot;unit_price&quot;]).to eq(item.unit_price.to_s)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="36">
@@ -11837,7 +11867,7 @@
         <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(json_response.first[&quot;unit_price&quot;]).to eq(items.first.unit_price)</code>
+          <code class="ruby">      expect(json_response.first[&quot;unit_price&quot;]).to eq(items.first.unit_price.to_s)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="23">
@@ -11873,7 +11903,7 @@
         <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(json_response.last[&quot;unit_price&quot;]).to eq(items.last.unit_price)</code>
+          <code class="ruby">      expect(json_response.last[&quot;unit_price&quot;]).to eq(items.last.unit_price.to_s)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="29">
@@ -13331,7 +13361,7 @@
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">    unit_price &quot;37462&quot;</code>
+          <code class="ruby">    unit_price 37462</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
@@ -13439,7 +13469,7 @@
         <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
-          <code class="ruby">    unit_price &quot;62809&quot;</code>
+          <code class="ruby">    unit_price 62809</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="34">
@@ -13721,7 +13751,7 @@
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(invoice_item.unit_price).to eq(&quot;874.68&quot;)</code>
+          <code class="ruby">    expect(invoice_item.unit_price.to_f).to eq(874.68)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -13925,7 +13955,7 @@
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(item.unit_price).to eq(&quot;874.68&quot;)</code>
+          <code class="ruby">    expect(item.unit_price.to_f).to eq(874.68)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">

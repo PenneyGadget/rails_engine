@@ -8,6 +8,6 @@ class Item < ActiveRecord::Base
   default_scope { order('id ASC') }
 
   def convert_to_dollars
-    self.unit_price = (unit_price.to_i / 100.0).to_s
+    self.unit_price = (unit_price.to_i / 100.0)
   end
 end

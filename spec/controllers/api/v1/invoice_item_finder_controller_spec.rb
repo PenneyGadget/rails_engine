@@ -24,7 +24,7 @@ RSpec.describe Api::V1::InvoiceItemFinderController, type: :controller do
 
       get :show, unit_price: invoice_items.first.unit_price, format: :json
 
-      expect(json_response["unit_price"]).to eq(invoice_items.first.unit_price)
+      expect(json_response["unit_price"]).to eq(invoice_items.first.unit_price.to_s)
       expect(response).to be_success
       expect(response.status).to eq(200)
     end

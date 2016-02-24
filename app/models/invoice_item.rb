@@ -5,6 +5,6 @@ class InvoiceItem < ActiveRecord::Base
   before_save :convert_to_dollars
 
   def convert_to_dollars
-    self.unit_price = (unit_price.to_i / 100.00).to_s
+    self.unit_price = (unit_price.to_i / 100.00)
   end
 end

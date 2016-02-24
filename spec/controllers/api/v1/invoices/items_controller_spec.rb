@@ -18,7 +18,7 @@ RSpec.describe Api::V1::Invoices::ItemsController, type: :controller do
       expect(json_response.first["id"]).to eq(items.first.id)
       expect(json_response.first["name"]).to eq(items.first.name)
       expect(json_response.first["description"]).to eq(items.first.description)
-      expect(json_response.last["unit_price"]).to eq(items.last.unit_price)
+      expect(json_response.last["unit_price"]).to eq(items.last.unit_price.to_s)
       expect(json_response.last["merchant_id"]).to eq(items.last.merchant_id)
     end
   end
