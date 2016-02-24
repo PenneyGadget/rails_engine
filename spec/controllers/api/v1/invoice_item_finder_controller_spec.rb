@@ -60,12 +60,12 @@ RSpec.describe Api::V1::InvoiceItemFinderController, type: :controller do
   describe "GET #show" do
     let(:json_response) { JSON.parse(response.body) }
 
-    xit "returns invoice item with specified created at time" do
+    it "returns invoice item with specified created at time" do
       invoice_items = create_list(:invoice_item, 3)
 
       get :show, created_at: invoice_items.first.created_at, format: :json
 
-      expect(json_response["created_at"]).to eq(invoice_items.first.created_at)
+      expect(json_response["created_at"]).to eq("2016-02-23T00:00:00.000Z")
       expect(response).to be_success
       expect(response.status).to eq(200)
     end
@@ -74,12 +74,12 @@ RSpec.describe Api::V1::InvoiceItemFinderController, type: :controller do
   describe "GET #show" do
     let(:json_response) { JSON.parse(response.body) }
 
-    xit "returns invoice item with specified updated at time" do
+    it "returns invoice item with specified updated at time" do
       invoice_items = create_list(:invoice_item, 3)
 
       get :show, updated_at: invoice_items.last.updated_at, format: :json
 
-      expect(json_response["updated_at"]).to eq(invoice_items.last.updated_at)
+      expect(json_response["updated_at"]).to eq("2016-02-23T00:00:00.000Z")
       expect(response).to be_success
       expect(response.status).to eq(200)
     end
@@ -104,7 +104,7 @@ RSpec.describe Api::V1::InvoiceItemFinderController, type: :controller do
   describe "GET #index" do
     let(:json_response) { JSON.parse(response.body) }
 
-    xit "returns all invoice items with specified unit_price" do
+    it "returns all invoice items with specified unit_price" do
       InvoiceItem.create(unit_price: 24784)
       InvoiceItem.create(unit_price: 16677)
       InvoiceItem.create(unit_price: 16677)

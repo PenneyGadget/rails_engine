@@ -33,12 +33,12 @@ RSpec.describe Api::V1::CustomerFinderController, type: :controller do
   describe "GET #show" do
     let(:json_response) { JSON.parse(response.body) }
 
-    xit "returns customer with specified created at time" do
+    it "returns customer with specified created at time" do
       customers = create_list(:customer, 3)
 
       get :show, created_at: customers.first.created_at, format: :json
 
-      expect(json_response["created_at"]).to eq(customers.first.created_at)
+      expect(json_response["created_at"]).to eq("2016-02-23T00:00:00.000Z")
       expect(response).to be_success
       expect(response.status).to eq(200)
     end
@@ -47,12 +47,12 @@ RSpec.describe Api::V1::CustomerFinderController, type: :controller do
   describe "GET #show" do
     let(:json_response) { JSON.parse(response.body) }
 
-    xit "returns customer with specified updated at time" do
+    it "returns customer with specified updated at time" do
       customers = create_list(:customer, 3)
 
       get :show, updated_at: customers.first.updated_at, format: :json
 
-      expect(json_response["updated_at"]).to eq(customers.first.updated_at)
+      expect(json_response["updated_at"]).to eq("2016-02-23T00:00:00.000Z")
       expect(response).to be_success
       expect(response.status).to eq(200)
     end

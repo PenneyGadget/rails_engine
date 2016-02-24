@@ -59,12 +59,12 @@ RSpec.describe Api::V1::ItemFinderController, type: :controller do
   describe "GET #show" do
     let(:json_response) { JSON.parse(response.body) }
 
-    xit "returns item with specified created at time" do
+    it "returns item with specified created at time" do
       items = create_list(:item, 3)
 
       get :show, created_at: items.first.created_at, format: :json
 
-      expect(json_response["created_at"]).to eq(items.first.created_at)
+      expect(json_response["created_at"]).to eq("2016-02-23T00:00:00.000Z")
       expect(response).to be_success
       expect(response.status).to eq(200)
     end
@@ -73,12 +73,12 @@ RSpec.describe Api::V1::ItemFinderController, type: :controller do
   describe "GET #show" do
     let(:json_response) { JSON.parse(response.body) }
 
-    xit "returns item with specified updated at time" do
+    it "returns item with specified updated at time" do
       items = create_list(:item, 3)
 
       get :show, updated_at: items.last.updated_at, format: :json
 
-      expect(json_response["updated_at"]).to eq(items.last.updated_at)
+      expect(json_response["updated_at"]).to eq("2016-02-23T00:00:00.000Z")
       expect(response).to be_success
       expect(response.status).to eq(200)
     end
