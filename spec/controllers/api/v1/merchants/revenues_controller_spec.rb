@@ -23,6 +23,9 @@ RSpec.describe Api::V1::Merchants::RevenuesController, type: :controller do
       expect(json_response).to eq()
     end
   end
+
+  xit "returns the total revenue for a merchant on a specified date" do
+  end
 end
 
 # returns the total revenue for that merchant across all transactions
