@@ -9,10 +9,6 @@ Rails.application.routes.draw do
         get '/items', to: 'merchants/items#index'
         get '/invoices', to: 'merchants/invoices#index'
         get '/revenue', to: 'merchants/revenues#show'
-
-        # get 'most_revenue', to: 'merchants/most_revenue#index'
-        # get 'most_items', to: 'merchants/most_items#index'
-        # get 'revenue', to: 'merchants/revenue#show'
       end
 
       get '/customers/find', to: 'customer_finder#show'
@@ -27,6 +23,7 @@ Rails.application.routes.draw do
       get '/items/find', to: 'item_finder#show'
       get '/items/find_all', to: 'item_finder#index'
       get '/items/random', to: 'random_item#show'
+      get '/items/most_items', to: 'items/most_items#index'
 
       resources :items, only: [:index, :show] do
         get '/invoice_items', to: 'items/invoice_items#index'
