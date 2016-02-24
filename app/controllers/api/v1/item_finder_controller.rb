@@ -2,7 +2,7 @@ class Api::V1::ItemFinderController < ApplicationController
   respond_to :json
 
   def index
-    respond_with Item.where(params[:id]) if params[:id]
+    respond_with Item.where(id: params[:id]) if params[:id]
     respond_with Item.where("name ILIKE ?", params[:name]) if params[:name]
     respond_with Item.where("description ILIKE ?", params[:description]) if params[:description]
     respond_with Item.where(unit_price: params[:unit_price]) if params[:unit_price]

@@ -2,7 +2,7 @@ class Api::V1::InvoiceItemFinderController < ApplicationController
   respond_to :json
 
   def index
-    respond_with InvoiceItem.where(params[:id]) if params[:id]
+    respond_with InvoiceItem.where(id: params[:id]) if params[:id]
     respond_with InvoiceItem.where(quantity: params[:quantity]) if params[:quantity]
     respond_with InvoiceItem.where(unit_price: params[:unit_price]) if params[:unit_price]
     respond_with InvoiceItem.where(item_id: params[:item_id]) if params[:item_id]
