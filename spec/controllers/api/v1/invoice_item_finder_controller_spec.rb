@@ -85,4 +85,36 @@ RSpec.describe Api::V1::InvoiceItemFinderController, type: :controller do
     end
   end
 
+  describe "GET #index" do
+    let(:json_response) { JSON.parse(response.body) }
+
+    it "returns all invoice items with specified quantity" do
+      InvoiceItem.create(quantity: 24)
+      InvoiceItem.create(quantity: 16)
+      InvoiceItem.create(quantity: 16)
+
+      get :index, quantity: 16, format: :json
+
+      expect(json_response.count).to eq(2)
+      expect(response).to be_success
+      expect(response.status).to eq(200)
+    end
+  end
+
+  describe "GET #index" do
+    let(:json_response) { JSON.parse(response.body) }
+
+    xit "returns all invoice items with specified unit_price" do
+      InvoiceItem.create(unit_price: 24784)
+      InvoiceItem.create(unit_price: 16677)
+      InvoiceItem.create(unit_price: 16677)
+
+      get :index, unit_price: "166.77", format: :json
+
+      expect(json_response.count).to eq(2)
+      expect(response).to be_success
+      expect(response.status).to eq(200)
+    end
+  end
+
 end

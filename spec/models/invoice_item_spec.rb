@@ -5,9 +5,9 @@ RSpec.describe InvoiceItem, type: :model do
 
   it { should belong_to(:invoice) }
 
-  xit "converts cents to dollars" do
+  it "converts cents to dollars" do
     invoice_item = InvoiceItem.create(unit_price: 87468)
 
-    expect(invoice_item.convert_to_dollars).to eq(874.68)
+    expect(invoice_item.unit_price).to eq("874.68")
   end
 end

@@ -44,4 +44,20 @@ RSpec.describe Api::V1::MerchantFinderController, type: :controller do
     end
   end
 
+  describe "GET #index" do
+    let(:json_response) { JSON.parse(response.body) }
+
+    it "returns all merchants with specified name" do
+      Merchant.create(name: "Penney & Tired")
+      Merchant.create(name: "Rails & Engine")
+      Merchant.create(name: "Rails & Engine")
+
+      get :index, name: "Rails & Engine", format: :json
+
+      expect(json_response.count).to eq(2)
+      expect(response).to be_success
+      expect(response.status).to eq(200)
+    end
+  end
+
 end

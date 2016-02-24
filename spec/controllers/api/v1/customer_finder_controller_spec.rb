@@ -58,4 +58,36 @@ RSpec.describe Api::V1::CustomerFinderController, type: :controller do
     end
   end
 
+  describe "GET #index" do
+    let(:json_response) { JSON.parse(response.body) }
+
+    it "returns all customers with specified first_name" do
+      Customer.create(first_name: "Penney", last_name: "Garrett")
+      Customer.create(first_name: "Penney", last_name: "Gadget")
+      Customer.create(first_name: "Sara", last_name: "Gadget")
+
+      get :index, first_name: "penney", format: :json
+
+      expect(json_response.count).to eq(2)
+      expect(response).to be_success
+      expect(response.status).to eq(200)
+    end
+  end
+
+  describe "GET #index" do
+    let(:json_response) { JSON.parse(response.body) }
+
+    it "returns all customers with specified last_name" do
+      Customer.create(first_name: "Penney", last_name: "Garrett")
+      Customer.create(first_name: "Penney", last_name: "Gadget")
+      Customer.create(first_name: "Sara", last_name: "Gadget")
+
+      get :index, last_name: "GADGET", format: :json
+
+      expect(json_response.count).to eq(2)
+      expect(response).to be_success
+      expect(response.status).to eq(200)
+    end
+  end
+
 end

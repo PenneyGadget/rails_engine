@@ -71,4 +71,20 @@ RSpec.describe Api::V1::InvoiceFinderController, type: :controller do
     end
   end
 
+  describe "GET #index" do
+    let(:json_response) { JSON.parse(response.body) }
+
+    it "returns all invoices with specified status" do
+      Invoice.create(status: "shipped")
+      Invoice.create(status: "shipped")
+      Invoice.create(status: "cancelled")
+
+      get :index, status: "cancelled", format: :json
+
+      expect(json_response.count).to eq(1)
+      expect(response).to be_success
+      expect(response.status).to eq(200)
+    end
+  end
+
 end

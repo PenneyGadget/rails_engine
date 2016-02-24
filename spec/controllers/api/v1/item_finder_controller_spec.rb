@@ -84,4 +84,52 @@ RSpec.describe Api::V1::ItemFinderController, type: :controller do
     end
   end
 
+  describe "GET #index" do
+    let(:json_response) { JSON.parse(response.body) }
+
+    it "returns all items with specified name" do
+      Item.create(name: "Apple")
+      Item.create(name: "Cherry")
+      Item.create(name: "Apple")
+
+      get :index, name: "Apple", format: :json
+
+      expect(json_response.count).to eq(2)
+      expect(response).to be_success
+      expect(response.status).to eq(200)
+    end
+  end
+
+  describe "GET #index" do
+    let(:json_response) { JSON.parse(response.body) }
+
+    it "returns all items with specified description" do
+      Item.create(description: "Juicy")
+      Item.create(description: "Tart")
+      Item.create(description: "Tart")
+
+      get :index, description: "Juicy", format: :json
+
+      expect(json_response.count).to eq(1)
+      expect(response).to be_success
+      expect(response.status).to eq(200)
+    end
+  end
+
+  describe "GET #index" do
+    let(:json_response) { JSON.parse(response.body) }
+
+    it "returns all items with specified unit_price" do
+      Item.create(unit_price: 88888)
+      Item.create(unit_price: 46374)
+      Item.create(unit_price: 46374)
+
+      get :index, unit_price: "463.74", format: :json
+
+      expect(json_response.count).to eq(2)
+      expect(response).to be_success
+      expect(response.status).to eq(200)
+    end
+  end
+
 end

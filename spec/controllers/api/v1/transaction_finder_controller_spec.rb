@@ -72,4 +72,36 @@ RSpec.describe Api::V1::TransactionFinderController, type: :controller do
     end
   end
 
+  describe "GET #index" do
+    let(:json_response) { JSON.parse(response.body) }
+
+    it "returns all transactions with specified credit card" do
+      Transaction.create(credit_card_number: "4536748574635648")
+      Transaction.create(credit_card_number: "4536748574635648")
+      Transaction.create(credit_card_number: "4637889944637284")
+
+      get :index, credit_card_number: "4536748574635648", format: :json
+
+      expect(json_response.count).to eq(2)
+      expect(response).to be_success
+      expect(response.status).to eq(200)
+    end
+  end
+
+  describe "GET #index" do
+    let(:json_response) { JSON.parse(response.body) }
+
+    it "returns all transactions with specified result" do
+      Transaction.create(result: "failed")
+      Transaction.create(result: "success")
+      Transaction.create(result: "success")
+
+      get :index, result: "failed", format: :json
+
+      expect(json_response.count).to eq(1)
+      expect(response).to be_success
+      expect(response.status).to eq(200)
+    end
+  end
+
 end
