@@ -16,6 +16,7 @@ RSpec.describe Api::V1::Invoices::TransactionsController, type: :controller do
       expect(response).to be_success
       expect(response.status).to eq(200)
 
+      expect(json_response.count).to eq(2)
       expect(json_response.first["id"]).to eq(transactions.first.id)
       expect(json_response.first["credit_card_number"]).to eq(transactions.first.credit_card_number)
       expect(json_response.last["result"]).to eq(transactions.last.result)
