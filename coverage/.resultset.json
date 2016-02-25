@@ -327,12 +327,14 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         1,
         1,
         1,
         null,
+        1,
         1,
         1,
         1,
@@ -1670,6 +1672,9 @@
         null,
         null
       ],
+      "/Users/Penney/Documents/Turing/3_module/projects/rails_engine/spec/controllers/api/v1/merchants/favorite_customers_controller_spec.rb": [
+
+      ],
       "/Users/Penney/Documents/Turing/3_module/projects/rails_engine/spec/controllers/api/v1/merchants/invoices_controller_spec.rb": [
         1,
         null,
@@ -2231,6 +2236,6 @@
         null
       ]
     },
-    "timestamp": 1456356607
+    "timestamp": 1456359504
   }
 }
