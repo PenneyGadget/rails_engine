@@ -552,9 +552,6 @@
         null,
         null
       ],
-      "/Users/Penney/Documents/Turing/3_module/projects/rails_engine/spec/controllers/api/v1/customers/favorite_merchants_controller_spec.rb": [
-
-      ],
       "/Users/Penney/Documents/Turing/3_module/projects/rails_engine/spec/controllers/api/v1/customers/invoices_controller_spec.rb": [
         1,
         null,
@@ -1519,12 +1516,6 @@
         null,
         null
       ],
-      "/Users/Penney/Documents/Turing/3_module/projects/rails_engine/spec/controllers/api/v1/items/most_items_controller_spec.rb": [
-
-      ],
-      "/Users/Penney/Documents/Turing/3_module/projects/rails_engine/spec/controllers/api/v1/items/most_revenues_controller_spec.rb": [
-
-      ],
       "/Users/Penney/Documents/Turing/3_module/projects/rails_engine/spec/controllers/api/v1/items_controller_spec.rb": [
         1,
         null,
@@ -1679,9 +1670,6 @@
         null,
         null
       ],
-      "/Users/Penney/Documents/Turing/3_module/projects/rails_engine/spec/controllers/api/v1/merchants/favorite_customers_controller_spec.rb": [
-
-      ],
       "/Users/Penney/Documents/Turing/3_module/projects/rails_engine/spec/controllers/api/v1/merchants/invoices_controller_spec.rb": [
         1,
         null,
@@ -1759,63 +1747,6 @@
         null,
         1,
         1,
-        null,
-        null,
-        null
-      ],
-      "/Users/Penney/Documents/Turing/3_module/projects/rails_engine/spec/controllers/api/v1/merchants/revenues_controller_spec.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0,
-        null,
-        0,
-        0,
-        null,
-        0,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/Penney/Documents/Turing/3_module/projects/rails_engine/app/controllers/api/v1/merchants/revenues_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0,
-        null,
-        0,
-        null,
-        null,
-        null,
-        null,
-        0,
         null,
         null,
         null
@@ -2243,6 +2174,6 @@
         null
       ]
     },
-    "timestamp": 1456360566
+    "timestamp": 1456363793
   }
 }
