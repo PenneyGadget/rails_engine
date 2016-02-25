@@ -344,6 +344,7 @@
         1,
         1,
         1,
+        1,
         null,
         1,
         1,
@@ -550,6 +551,9 @@
         18,
         null,
         null
+      ],
+      "/Users/Penney/Documents/Turing/3_module/projects/rails_engine/spec/controllers/api/v1/customers/favorite_merchants_controller_spec.rb": [
+
       ],
       "/Users/Penney/Documents/Turing/3_module/projects/rails_engine/spec/controllers/api/v1/customers/invoices_controller_spec.rb": [
         1,
@@ -1518,6 +1522,9 @@
       "/Users/Penney/Documents/Turing/3_module/projects/rails_engine/spec/controllers/api/v1/items/most_items_controller_spec.rb": [
 
       ],
+      "/Users/Penney/Documents/Turing/3_module/projects/rails_engine/spec/controllers/api/v1/items/most_revenues_controller_spec.rb": [
+
+      ],
       "/Users/Penney/Documents/Turing/3_module/projects/rails_engine/spec/controllers/api/v1/items_controller_spec.rb": [
         1,
         null,
@@ -2236,6 +2243,6 @@
         null
       ]
     },
-    "timestamp": 1456359504
+    "timestamp": 1456360566
   }
 }
